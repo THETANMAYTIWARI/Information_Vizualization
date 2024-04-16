@@ -1,0 +1,2115 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20221.22.0324.2209                               -->
+<workbook original-version='18.1' source-build='2022.1.0 (20221.22.0324.2209)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Tree Map' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Hulu&quot;'>
+        <calculation class='tableau' formula='&quot;Hulu&quot;' />
+        <members>
+          <member value='&quot;Amazon Prime&quot;' />
+          <member value='&quot;Disney Plus&quot;' />
+          <member value='&quot;Hulu&quot;' />
+          <member value='&quot;Netflix&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='amazon_prime_titles' inline='true' name='federated.1hafrpu16vcgv61ah4qqm11kh0m1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='amazon_prime_titles' name='textscan.0nqonc80bt9s7j1a30svb0twqb0y'>
+            <connection class='textscan' directory='C:/Users/TANMAY TIWARI/VIT/4th Sem/IV_PROJECT' filename='amazon_prime_titles.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0nqonc80bt9s7j1a30svb0twqb0y' name='amazon_prime_titles.csv' table='[amazon_prime_titles#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='show_id' ordinal='0' />
+            <column datatype='string' name='type' ordinal='1' />
+            <column datatype='string' name='title' ordinal='2' />
+            <column datatype='string' name='director' ordinal='3' />
+            <column datatype='string' name='cast' ordinal='4' />
+            <column datatype='string' name='country' ordinal='5' />
+            <column datatype='string' name='date_added' ordinal='6' />
+            <column datatype='integer' name='release_year' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='string' name='duration' ordinal='9' />
+            <column datatype='string' name='listed_in' ordinal='10' />
+            <column datatype='string' name='description' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0nqonc80bt9s7j1a30svb0twqb0y' name='amazon_prime_titles.csv' table='[amazon_prime_titles#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='show_id' ordinal='0' />
+            <column datatype='string' name='type' ordinal='1' />
+            <column datatype='string' name='title' ordinal='2' />
+            <column datatype='string' name='director' ordinal='3' />
+            <column datatype='string' name='cast' ordinal='4' />
+            <column datatype='string' name='country' ordinal='5' />
+            <column datatype='string' name='date_added' ordinal='6' />
+            <column datatype='integer' name='release_year' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='string' name='duration' ordinal='9' />
+            <column datatype='string' name='listed_in' ordinal='10' />
+            <column datatype='string' name='description' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>show_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[show_id]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>show_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>director</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[director]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>director</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cast</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cast]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>cast</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_added</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[date_added]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>date_added</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[release_year]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>release_year</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rating]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>rating</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[duration]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>duration</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>listed_in</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[listed_in]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>listed_in</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[amazon_prime_titles.csv]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Tree Map' datatype='string' default-role='measure' default-type='quantitative' name='[Calculation_211669210824880129]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='amazon_prime_titles.csv' datatype='table' name='[__tableau_internal_object_id__].[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]' role='measure' type='quantitative' />
+      <column caption='Cast' datatype='string' name='[cast]' role='dimension' type='nominal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Date Added' datatype='string' name='[date_added]' role='dimension' type='nominal' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Director' datatype='string' name='[director]' role='dimension' type='nominal' />
+      <column caption='Duration' datatype='string' name='[duration]' role='dimension' type='nominal' />
+      <column caption='Listed In' datatype='string' name='[listed_in]' role='dimension' type='nominal' />
+      <column caption='Rating' datatype='string' name='[rating]' role='dimension' type='nominal' />
+      <column caption='Release Year' datatype='integer' name='[release_year]' role='dimension' type='quantitative' />
+      <column caption='Show Id' datatype='string' name='[show_id]' role='dimension' type='nominal' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Tree Map' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Hulu&quot;'>
+          <calculation class='tableau' formula='&quot;Hulu&quot;' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='amazon_prime_titles.csv' id='amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21'>
+            <properties context=''>
+              <relation connection='textscan.0nqonc80bt9s7j1a30svb0twqb0y' name='amazon_prime_titles.csv' table='[amazon_prime_titles#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='show_id' ordinal='0' />
+                  <column datatype='string' name='type' ordinal='1' />
+                  <column datatype='string' name='title' ordinal='2' />
+                  <column datatype='string' name='director' ordinal='3' />
+                  <column datatype='string' name='cast' ordinal='4' />
+                  <column datatype='string' name='country' ordinal='5' />
+                  <column datatype='string' name='date_added' ordinal='6' />
+                  <column datatype='integer' name='release_year' ordinal='7' />
+                  <column datatype='string' name='rating' ordinal='8' />
+                  <column datatype='string' name='duration' ordinal='9' />
+                  <column datatype='string' name='listed_in' ordinal='10' />
+                  <column datatype='string' name='description' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='disney_plus_titles' inline='true' name='federated.0kk02bb1qvqr101665rqz1ai5fd1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='disney_plus_titles' name='textscan.0f6pxh306k187o181dxgz1fg0q51'>
+            <connection class='textscan' directory='C:/Users/TANMAY TIWARI/VIT/4th Sem/IV_PROJECT' filename='disney_plus_titles.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0f6pxh306k187o181dxgz1fg0q51' name='disney_plus_titles.csv' table='[disney_plus_titles#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='show_id' ordinal='0' />
+            <column datatype='string' name='type' ordinal='1' />
+            <column datatype='string' name='title' ordinal='2' />
+            <column datatype='string' name='director' ordinal='3' />
+            <column datatype='string' name='cast' ordinal='4' />
+            <column datatype='string' name='country' ordinal='5' />
+            <column datatype='string' name='date_added' ordinal='6' />
+            <column datatype='integer' name='release_year' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='string' name='duration' ordinal='9' />
+            <column datatype='string' name='listed_in' ordinal='10' />
+            <column datatype='string' name='description' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0f6pxh306k187o181dxgz1fg0q51' name='disney_plus_titles.csv' table='[disney_plus_titles#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='show_id' ordinal='0' />
+            <column datatype='string' name='type' ordinal='1' />
+            <column datatype='string' name='title' ordinal='2' />
+            <column datatype='string' name='director' ordinal='3' />
+            <column datatype='string' name='cast' ordinal='4' />
+            <column datatype='string' name='country' ordinal='5' />
+            <column datatype='string' name='date_added' ordinal='6' />
+            <column datatype='integer' name='release_year' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='string' name='duration' ordinal='9' />
+            <column datatype='string' name='listed_in' ordinal='10' />
+            <column datatype='string' name='description' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>show_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[show_id]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>show_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>director</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[director]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>director</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cast</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cast]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>cast</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_added</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[date_added]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>date_added</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[release_year]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>release_year</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rating]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>rating</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[duration]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>duration</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>listed_in</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[listed_in]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>listed_in</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[disney_plus_titles.csv]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Tree Map' datatype='string' name='[Calculation_211669210825809922]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='disney_plus_titles.csv' datatype='table' name='[__tableau_internal_object_id__].[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]' role='measure' type='quantitative' />
+      <column caption='Cast' datatype='string' name='[cast]' role='dimension' type='nominal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Date Added' datatype='string' name='[date_added]' role='dimension' type='nominal' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Director' datatype='string' name='[director]' role='dimension' type='nominal' />
+      <column caption='Duration' datatype='string' name='[duration]' role='dimension' type='nominal' />
+      <column caption='Listed In' datatype='string' name='[listed_in]' role='dimension' type='nominal' />
+      <column caption='Rating' datatype='string' name='[rating]' role='dimension' type='nominal' />
+      <column caption='Release Year' datatype='integer' name='[release_year]' role='dimension' type='quantitative' />
+      <column caption='Show Id' datatype='string' name='[show_id]' role='dimension' type='nominal' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Tree Map' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Hulu&quot;'>
+          <calculation class='tableau' formula='&quot;Hulu&quot;' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='disney_plus_titles.csv' id='disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA'>
+            <properties context=''>
+              <relation connection='textscan.0f6pxh306k187o181dxgz1fg0q51' name='disney_plus_titles.csv' table='[disney_plus_titles#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='show_id' ordinal='0' />
+                  <column datatype='string' name='type' ordinal='1' />
+                  <column datatype='string' name='title' ordinal='2' />
+                  <column datatype='string' name='director' ordinal='3' />
+                  <column datatype='string' name='cast' ordinal='4' />
+                  <column datatype='string' name='country' ordinal='5' />
+                  <column datatype='string' name='date_added' ordinal='6' />
+                  <column datatype='integer' name='release_year' ordinal='7' />
+                  <column datatype='string' name='rating' ordinal='8' />
+                  <column datatype='string' name='duration' ordinal='9' />
+                  <column datatype='string' name='listed_in' ordinal='10' />
+                  <column datatype='string' name='description' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='hulu_titles' inline='true' name='federated.1e8o9c20z7bw0w1byag5q0p2ii19' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='hulu_titles' name='textscan.07u6slt0mx7llg1bs9bw00t2chc9'>
+            <connection class='textscan' directory='C:/Users/TANMAY TIWARI/VIT/4th Sem/IV_PROJECT' filename='hulu_titles.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.07u6slt0mx7llg1bs9bw00t2chc9' name='hulu_titles.csv' table='[hulu_titles#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='show_id' ordinal='0' />
+            <column datatype='string' name='type' ordinal='1' />
+            <column datatype='string' name='title' ordinal='2' />
+            <column datatype='string' name='director' ordinal='3' />
+            <column datatype='string' name='cast' ordinal='4' />
+            <column datatype='string' name='country' ordinal='5' />
+            <column datatype='string' name='date_added' ordinal='6' />
+            <column datatype='integer' name='release_year' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='string' name='duration' ordinal='9' />
+            <column datatype='string' name='listed_in' ordinal='10' />
+            <column datatype='string' name='description' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.07u6slt0mx7llg1bs9bw00t2chc9' name='hulu_titles.csv' table='[hulu_titles#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='show_id' ordinal='0' />
+            <column datatype='string' name='type' ordinal='1' />
+            <column datatype='string' name='title' ordinal='2' />
+            <column datatype='string' name='director' ordinal='3' />
+            <column datatype='string' name='cast' ordinal='4' />
+            <column datatype='string' name='country' ordinal='5' />
+            <column datatype='string' name='date_added' ordinal='6' />
+            <column datatype='integer' name='release_year' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='string' name='duration' ordinal='9' />
+            <column datatype='string' name='listed_in' ordinal='10' />
+            <column datatype='string' name='description' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>show_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[show_id]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>show_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>director</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[director]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>director</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cast</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cast]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>cast</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_added</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[date_added]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>date_added</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[release_year]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>release_year</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rating]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>rating</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[duration]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>duration</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>listed_in</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[listed_in]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>listed_in</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[hulu_titles.csv]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Tree Map' datatype='string' name='[Calculation_211669210826006531]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='hulu_titles.csv' datatype='table' name='[__tableau_internal_object_id__].[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]' role='measure' type='quantitative' />
+      <column caption='Cast' datatype='string' name='[cast]' role='dimension' type='nominal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Date Added' datatype='string' name='[date_added]' role='dimension' type='nominal' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Director' datatype='string' name='[director]' role='dimension' type='nominal' />
+      <column caption='Duration' datatype='string' name='[duration]' role='dimension' type='nominal' />
+      <column caption='Listed In' datatype='string' name='[listed_in]' role='dimension' type='nominal' />
+      <column caption='Rating' datatype='string' name='[rating]' role='dimension' type='nominal' />
+      <column caption='Release Year' datatype='integer' name='[release_year]' role='dimension' type='quantitative' />
+      <column caption='Show Id' datatype='string' name='[show_id]' role='dimension' type='nominal' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Tree Map' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Hulu&quot;'>
+          <calculation class='tableau' formula='&quot;Hulu&quot;' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='hulu_titles.csv' id='hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91'>
+            <properties context=''>
+              <relation connection='textscan.07u6slt0mx7llg1bs9bw00t2chc9' name='hulu_titles.csv' table='[hulu_titles#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='show_id' ordinal='0' />
+                  <column datatype='string' name='type' ordinal='1' />
+                  <column datatype='string' name='title' ordinal='2' />
+                  <column datatype='string' name='director' ordinal='3' />
+                  <column datatype='string' name='cast' ordinal='4' />
+                  <column datatype='string' name='country' ordinal='5' />
+                  <column datatype='string' name='date_added' ordinal='6' />
+                  <column datatype='integer' name='release_year' ordinal='7' />
+                  <column datatype='string' name='rating' ordinal='8' />
+                  <column datatype='string' name='duration' ordinal='9' />
+                  <column datatype='string' name='listed_in' ordinal='10' />
+                  <column datatype='string' name='description' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='netflix_titles' inline='true' name='federated.0takd5c1wekx0o1bh44nx03dbdoq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='netflix_titles' name='textscan.1eft09b1tvfp2r1ds4z650egdcle'>
+            <connection class='textscan' directory='C:/Users/TANMAY TIWARI/VIT/4th Sem/IV_PROJECT' filename='netflix_titles.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1eft09b1tvfp2r1ds4z650egdcle' name='netflix_titles.csv' table='[netflix_titles#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='show_id' ordinal='0' />
+            <column datatype='string' name='type' ordinal='1' />
+            <column datatype='string' name='title' ordinal='2' />
+            <column datatype='string' name='director' ordinal='3' />
+            <column datatype='string' name='cast' ordinal='4' />
+            <column datatype='string' name='country' ordinal='5' />
+            <column datatype='string' name='date_added' ordinal='6' />
+            <column datatype='integer' name='release_year' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='string' name='duration' ordinal='9' />
+            <column datatype='string' name='listed_in' ordinal='10' />
+            <column datatype='string' name='description' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1eft09b1tvfp2r1ds4z650egdcle' name='netflix_titles.csv' table='[netflix_titles#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='show_id' ordinal='0' />
+            <column datatype='string' name='type' ordinal='1' />
+            <column datatype='string' name='title' ordinal='2' />
+            <column datatype='string' name='director' ordinal='3' />
+            <column datatype='string' name='cast' ordinal='4' />
+            <column datatype='string' name='country' ordinal='5' />
+            <column datatype='string' name='date_added' ordinal='6' />
+            <column datatype='integer' name='release_year' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='string' name='duration' ordinal='9' />
+            <column datatype='string' name='listed_in' ordinal='10' />
+            <column datatype='string' name='description' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>show_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[show_id]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>show_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>director</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[director]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>director</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cast</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cast]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>cast</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_added</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[date_added]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>date_added</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[release_year]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>release_year</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rating]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>rating</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[duration]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>duration</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>listed_in</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[listed_in]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>listed_in</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[netflix_titles.csv]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Tree Map' datatype='string' name='[Calculation_211669210826174468]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='netflix_titles.csv' datatype='table' name='[__tableau_internal_object_id__].[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]' role='measure' type='quantitative' />
+      <column caption='Cast' datatype='string' name='[cast]' role='dimension' type='nominal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Date Added' datatype='string' name='[date_added]' role='dimension' type='nominal' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Director' datatype='string' name='[director]' role='dimension' type='nominal' />
+      <column caption='Duration' datatype='string' name='[duration]' role='dimension' type='nominal' />
+      <column caption='Listed In' datatype='string' name='[listed_in]' role='dimension' type='nominal' />
+      <column caption='Rating' datatype='string' name='[rating]' role='dimension' type='nominal' />
+      <column caption='Release Year' datatype='integer' name='[release_year]' role='dimension' type='quantitative' />
+      <column caption='Show Id' datatype='string' name='[show_id]' role='dimension' type='nominal' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Tree Map' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Hulu&quot;'>
+          <calculation class='tableau' formula='&quot;Hulu&quot;' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='netflix_titles.csv' id='netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4'>
+            <properties context=''>
+              <relation connection='textscan.1eft09b1tvfp2r1ds4z650egdcle' name='netflix_titles.csv' table='[netflix_titles#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='show_id' ordinal='0' />
+                  <column datatype='string' name='type' ordinal='1' />
+                  <column datatype='string' name='title' ordinal='2' />
+                  <column datatype='string' name='director' ordinal='3' />
+                  <column datatype='string' name='cast' ordinal='4' />
+                  <column datatype='string' name='country' ordinal='5' />
+                  <column datatype='string' name='date_added' ordinal='6' />
+                  <column datatype='integer' name='release_year' ordinal='7' />
+                  <column datatype='string' name='rating' ordinal='8' />
+                  <column datatype='string' name='duration' ordinal='9' />
+                  <column datatype='string' name='listed_in' ordinal='10' />
+                  <column datatype='string' name='description' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Amazon Prime'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Amazon Prime</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='amazon_prime_titles' name='federated.1hafrpu16vcgv61ah4qqm11kh0m1' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Tree Map' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Hulu&quot;'>
+              <calculation class='tableau' formula='&quot;Hulu&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1hafrpu16vcgv61ah4qqm11kh0m1'>
+            <_.fcp.ObjectModelTableType.false...column caption='amazon_prime_titles.csv' datatype='integer' name='[__tableau_internal_object_id__].[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]' role='measure' type='quantitative' />
+            <column caption='Tree Map' datatype='string' default-role='measure' default-type='quantitative' name='[Calculation_211669210824880129]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+            </column>
+            <_.fcp.ObjectModelTableType.true...column caption='amazon_prime_titles.csv' datatype='table' name='[__tableau_internal_object_id__].[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21:qk]' pivot='key' type='quantitative' />
+            <column caption='Listed In' datatype='string' name='[listed_in]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_211669210824880129]' derivation='None' name='[none:Calculation_211669210824880129:nk]' pivot='key' type='nominal' />
+            <column-instance column='[listed_in]' derivation='None' name='[none:listed_in:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[none:Calculation_211669210824880129:nk]'>
+            <groupfilter function='member' level='[none:Calculation_211669210824880129:nk]' member='&quot;Amazon Prime&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[none:Calculation_211669210824880129:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[__tableau_internal_object_id__].[cnt:amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[__tableau_internal_object_id__].[cnt:amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21:qk]' palette='red_green_gold_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[__tableau_internal_object_id__].[cnt:amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21:qk]' />
+              <color column='[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[__tableau_internal_object_id__].[cnt:amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21:qk]' />
+              <text column='[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[none:listed_in:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{017A3E9F-2285-4B12-8B87-D878544CAEA9}' />
+    </worksheet>
+    <worksheet name='Disney Plus'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Disney Plus</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='disney_plus_titles' name='federated.0kk02bb1qvqr101665rqz1ai5fd1' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Tree Map' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Hulu&quot;'>
+              <calculation class='tableau' formula='&quot;Hulu&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0kk02bb1qvqr101665rqz1ai5fd1'>
+            <column caption='Tree Map' datatype='string' name='[Calculation_211669210825809922]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='disney_plus_titles.csv' datatype='integer' name='[__tableau_internal_object_id__].[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='disney_plus_titles.csv' datatype='table' name='[__tableau_internal_object_id__].[disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA]' role='measure' type='quantitative' />
+            <column caption='Listed In' datatype='string' name='[listed_in]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_211669210825809922]' derivation='None' name='[none:Calculation_211669210825809922:nk]' pivot='key' type='nominal' />
+            <column-instance column='[listed_in]' derivation='None' name='[none:listed_in:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0kk02bb1qvqr101665rqz1ai5fd1].[none:Calculation_211669210825809922:nk]'>
+            <groupfilter function='member' level='[none:Calculation_211669210825809922:nk]' member='&quot;Disney Plus&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0kk02bb1qvqr101665rqz1ai5fd1].[none:Calculation_211669210825809922:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0kk02bb1qvqr101665rqz1ai5fd1].[__tableau_internal_object_id__].[cnt:disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA:qk]' palette='blue_teal_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0kk02bb1qvqr101665rqz1ai5fd1].[__tableau_internal_object_id__].[cnt:disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA:qk]' />
+              <color column='[federated.0kk02bb1qvqr101665rqz1ai5fd1].[__tableau_internal_object_id__].[cnt:disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA:qk]' />
+              <text column='[federated.0kk02bb1qvqr101665rqz1ai5fd1].[none:listed_in:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A423ACD9-D8EF-4F2E-AC64-BF2F9DF1C7A3}' />
+    </worksheet>
+    <worksheet name='Hulu'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Hulu</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hulu_titles' name='federated.1e8o9c20z7bw0w1byag5q0p2ii19' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Tree Map' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Hulu&quot;'>
+              <calculation class='tableau' formula='&quot;Hulu&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1e8o9c20z7bw0w1byag5q0p2ii19'>
+            <column caption='Tree Map' datatype='string' name='[Calculation_211669210826006531]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='hulu_titles.csv' datatype='integer' name='[__tableau_internal_object_id__].[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='hulu_titles.csv' datatype='table' name='[__tableau_internal_object_id__].[hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91]' role='measure' type='quantitative' />
+            <column caption='Listed In' datatype='string' name='[listed_in]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_211669210826006531]' derivation='None' name='[none:Calculation_211669210826006531:nk]' pivot='key' type='nominal' />
+            <column-instance column='[listed_in]' derivation='None' name='[none:listed_in:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1e8o9c20z7bw0w1byag5q0p2ii19].[none:Calculation_211669210826006531:nk]'>
+            <groupfilter function='member' level='[none:Calculation_211669210826006531:nk]' member='&quot;Hulu&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1e8o9c20z7bw0w1byag5q0p2ii19].[none:Calculation_211669210826006531:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1e8o9c20z7bw0w1byag5q0p2ii19].[__tableau_internal_object_id__].[cnt:hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91:qk]' palette='green_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1e8o9c20z7bw0w1byag5q0p2ii19].[__tableau_internal_object_id__].[cnt:hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91:qk]' />
+              <color column='[federated.1e8o9c20z7bw0w1byag5q0p2ii19].[__tableau_internal_object_id__].[cnt:hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91:qk]' />
+              <text column='[federated.1e8o9c20z7bw0w1byag5q0p2ii19].[none:listed_in:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{63A1E29F-90F0-4D73-A497-A6D630D2207A}' />
+    </worksheet>
+    <worksheet name='Netflix'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Netflix</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='netflix_titles' name='federated.0takd5c1wekx0o1bh44nx03dbdoq' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Tree Map' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Hulu&quot;'>
+              <calculation class='tableau' formula='&quot;Hulu&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0takd5c1wekx0o1bh44nx03dbdoq'>
+            <column caption='Tree Map' datatype='string' name='[Calculation_211669210826174468]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='netflix_titles.csv' datatype='integer' name='[__tableau_internal_object_id__].[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='netflix_titles.csv' datatype='table' name='[__tableau_internal_object_id__].[netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4]' role='measure' type='quantitative' />
+            <column caption='Listed In' datatype='string' name='[listed_in]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_211669210826174468]' derivation='None' name='[none:Calculation_211669210826174468:nk]' pivot='key' type='nominal' />
+            <column-instance column='[listed_in]' derivation='None' name='[none:listed_in:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0takd5c1wekx0o1bh44nx03dbdoq].[none:Calculation_211669210826174468:nk]'>
+            <groupfilter function='member' level='[none:Calculation_211669210826174468:nk]' member='&quot;Netflix&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0takd5c1wekx0o1bh44nx03dbdoq].[none:Calculation_211669210826174468:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0takd5c1wekx0o1bh44nx03dbdoq].[__tableau_internal_object_id__].[cnt:netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4:qk]' palette='tableau-map-temperatur' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0takd5c1wekx0o1bh44nx03dbdoq].[__tableau_internal_object_id__].[cnt:netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4:qk]' />
+              <color column='[federated.0takd5c1wekx0o1bh44nx03dbdoq].[__tableau_internal_object_id__].[cnt:netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4:qk]' />
+              <text column='[federated.0takd5c1wekx0o1bh44nx03dbdoq].[none:listed_in:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2C9A3B52-A94B-45ED-ACAD-0C5CD1544C0C}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98142' id='7' param='horz' type-v2='layout-flow' w='99016' x='492' y='929'>
+            <zone h='98142' id='5' type-v2='layout-basic' w='99016' x='492' y='929'>
+              <zone h='49071' id='3' name='Amazon Prime' w='49508' x='492' y='929'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49071' id='9' name='Disney Plus' w='49508' x='50000' y='929'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49071' id='11' name='Hulu' w='49508' x='492' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49071' id='13' name='Netflix' w='49508' x='50000' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1200' minheight='1200' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='17' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98142' id='16' param='vert' type-v2='layout-flow' w='99016' x='492' y='929'>
+                <zone fixed-size='280' h='49071' id='3' is-fixed='true' name='Amazon Prime' w='49508' x='492' y='929'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49071' id='9' is-fixed='true' name='Disney Plus' w='49508' x='50000' y='929'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49071' id='11' is-fixed='true' name='Hulu' w='49508' x='492' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49071' id='13' is-fixed='true' name='Netflix' w='49508' x='50000' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{8C3BE847-320C-4E6D-A50B-7C975D07E3C9}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='115'>
+    <window class='worksheet' name='Amazon Prime'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[__tableau_internal_object_id__].[cnt:amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21:qk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[__tableau_internal_object_id__].[cnt:amazon_prime_titles.csv_F52B44D18D414720A8A048D11796AB21:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[none:Calculation_211669210824880129:nk]</field>
+            <field>[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[none:cast:nk]</field>
+            <field>[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[none:date_added:nk]</field>
+            <field>[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[none:description:nk]</field>
+            <field>[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[none:duration:nk]</field>
+            <field>[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[none:listed_in:nk]</field>
+            <field>[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[none:release_year:qk]</field>
+            <field>[federated.1hafrpu16vcgv61ah4qqm11kh0m1].[none:show_id:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7705B99C-3461-465B-A828-C8314AB4E38C}' />
+    </window>
+    <window class='worksheet' name='Disney Plus'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0kk02bb1qvqr101665rqz1ai5fd1].[__tableau_internal_object_id__].[cnt:disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA:qk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.0kk02bb1qvqr101665rqz1ai5fd1].[__tableau_internal_object_id__].[cnt:disney_plus_titles.csv_C01A6D75BD0A4AE6B7340FC8EBB568DA:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0kk02bb1qvqr101665rqz1ai5fd1].[none:Calculation_211669210825809922:nk]</field>
+            <field>[federated.0kk02bb1qvqr101665rqz1ai5fd1].[none:listed_in:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3D0E414C-6D1B-46C1-B244-2C754B51AE50}' />
+    </window>
+    <window class='worksheet' name='Hulu'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1e8o9c20z7bw0w1byag5q0p2ii19].[__tableau_internal_object_id__].[cnt:hulu_titles.csv_3EBE21C5F83E45A59CCAEF56809ABF91:qk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1e8o9c20z7bw0w1byag5q0p2ii19].[none:Calculation_211669210826006531:nk]</field>
+            <field>[federated.1e8o9c20z7bw0w1byag5q0p2ii19].[none:listed_in:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CF2182E8-FE69-444F-9626-7F4691E10E11}' />
+    </window>
+    <window class='worksheet' name='Netflix'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0takd5c1wekx0o1bh44nx03dbdoq].[__tableau_internal_object_id__].[cnt:netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4:qk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.0takd5c1wekx0o1bh44nx03dbdoq].[__tableau_internal_object_id__].[cnt:netflix_titles.csv_EEF97854F78F4A548C5FA417598A8BF4:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0takd5c1wekx0o1bh44nx03dbdoq].[none:Calculation_211669210826174468:nk]</field>
+            <field>[federated.0takd5c1wekx0o1bh44nx03dbdoq].[none:listed_in:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3B1AF112-FA49-47E8-8C55-C3EB440C81F0}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Amazon Prime' />
+        <viewpoint name='Disney Plus' />
+        <viewpoint name='Hulu' />
+        <viewpoint name='Netflix' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{17E4C472-6CBB-4BCA-8FB9-A3FDEB74F28C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='24' name='Amazon Prime' width='64'>
+      iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAAS0lEQVRYhe3QQRHAMADDsHX8Oacw9KiFwOezbd/Dfh2gNUAHaA3QAVoDdIDWAB2gNUAH
+      aA3QAVoDdIDWAB2gNUAHaA3QAVoDdIB2AVXABCzFbDFLAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='24' name='Disney Plus' width='64'>
+      iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAAS0lEQVRYhe3QQRHAMADDsHX8Oacw9KiFwOezbd/Dfh2gNUAHaA3QAVoDdIDWAB2gNUAH
+      aA3QAVoDdIDWAB2gNUAHaA3QAVoDdIB2AVXABCzFbDFLAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Hulu' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='24' name='Netflix' width='64'>
+      iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAAS0lEQVRYhe3QQRHAMADDsHX8Oacw9KiFwOezbd/Dfh2gNUAHaA3QAVoDdIDWAB2gNUAH
+      aA3QAVoDdIDWAB2gNUAHaA3QAVoDdIB2AVXABCzFbDFLAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
