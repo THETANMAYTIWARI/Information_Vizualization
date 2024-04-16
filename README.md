@@ -51,6 +51,14 @@ Creating visualizations that effectively convey insights.
 Leveraging Tableau's functionalities to construct visually appealing and interactive dashboards.
 Facilitating easy exploration of streaming content data through interactive elements.
 
+## 4. K-Means Clustering and Recommendation System:
+
+Applying the K-Means clustering algorithm to group similar shows and movies.
+Assigning cluster labels to data points.
+Building a recommendation engine that:
+Accepts a movie/show title as input.
+Identifies the cluster to which it belongs.
+Recommends similar shows/movies within the same cluster using text similarity techniques.
 
 
 ## Contribution
