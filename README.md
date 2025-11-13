@@ -64,3 +64,7 @@ Recommends similar shows/movies within the same cluster using text similarity te
 ## Contribution
 
 This project offers valuable insights into streaming content data analysis and visualization. It demonstrates the application of K-Means clustering for building a recommendation system. Feel free to explore the code and dashboards!
+
+
+<img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/13fb07e7-bf46-4269-ab82-fdceb0f54697" />
+
