@@ -58,6 +58,16 @@ This project cleans and merges four OTT datasets (~23k rows total), visualizes p
 <img width="1919" height="858" alt="image" src="https://github.com/user-attachments/assets/e799e77d-5b78-48f2-8a1d-a5471446066b" />
 <img width="1914" height="852" alt="image" src="https://github.com/user-attachments/assets/caadfdf4-4e6d-4a5a-9b2b-dc0fc4d6aa83" />
 
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/8fa73b4d-ffff-4bad-a4aa-d367a18e955b" width="450"/></td>
+    <td><img src="https://github.com/user-attachments/assets/a5868845-6ded-4d73-8ec2-8bb266c60667" width="450"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/e799e77d-5b78-48f2-8a1d-a5471446066b" width="450"/></td>
+    <td><img src="https://github.com/user-attachments/assets/caadfdf4-4e6d-4a5a-9b2b-dc0fc4d6aa83" width="450"/></td>
+  </tr>
+</table>
 
 
 
