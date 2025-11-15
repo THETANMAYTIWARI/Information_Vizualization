@@ -70,4 +70,12 @@ This project offers valuable insights into streaming content data analysis and v
 <img width="1919" height="927" alt="image" src="https://github.com/user-attachments/assets/ed0e7caf-f21f-4f5e-846d-dd11821bc880" />
 <img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/13fb07e7-bf46-4269-ab82-fdceb0f54697" />
 
+## Dashboard 
+<img width="1888" height="856" alt="image" src="https://github.com/user-attachments/assets/8fa73b4d-ffff-4bad-a4aa-d367a18e955b" />
+<img width="1914" height="860" alt="image" src="https://github.com/user-attachments/assets/a5868845-6ded-4d73-8ec2-8bb266c60667" />
+<img width="1919" height="858" alt="image" src="https://github.com/user-attachments/assets/e799e77d-5b78-48f2-8a1d-a5471446066b" />
+<img width="1914" height="852" alt="image" src="https://github.com/user-attachments/assets/caadfdf4-4e6d-4a5a-9b2b-dc0fc4d6aa83" />
+
+
+
 
