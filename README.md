@@ -38,12 +38,7 @@ This project cleans and merges four OTT datasets (~23k rows total), visualizes p
 
 * Build an interactive web app (Streamlit / Dash / Shiny) and expose an API (ONNX / TorchScript).
 
-### 📷 Preview
-
-<img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/27dd9d50-0249-434d-82c8-1db31cf3838a" />
-<img width="1918" height="929" alt="image" src="https://github.com/user-attachments/assets/a4bc36b1-f674-4b70-a141-730c281aaef7" />
-<img width="1919" height="927" alt="image" src="https://github.com/user-attachments/assets/ed0e7caf-f21f-4f5e-846d-dd11821bc880" />
-<img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/13fb07e7-bf46-4269-ab82-fdceb0f54697" />
+### 📷 Visuals Created Using Tableau
 
 <table>
   <tr>
