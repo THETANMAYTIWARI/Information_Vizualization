@@ -1,69 +1,42 @@
-## Abstract
+## 🎬 Streaming Content Analytics & Recommendation System
 
-This project constructs a streaming content dashboard for exploring and visualizing data on popular shows from Netflix, Hulu, Disney+, and Amazon Prime. It leverages K-Means clustering to develop a recommendation system that suggests similar movies based on a user's watch history.
+Compact dashboard + recommendation engine analyzing content from Netflix, Hulu, Disney+ and Amazon Prime and recommending similar titles using text embeddings and clustering.
 
-## Keywords
+### 🧾 Project Summary
 
-Netflix, Hulu, Disney Plus, Amazon Prime, Recommendation System, Text Clustering, Data Visualization & Analytics, OTT Content, K-Means Algorithm.
+This project cleans and merges four OTT datasets (~23k rows total), visualizes platform trends (ratings, countries, genres, yearly additions), generates semantic text embeddings from descriptions, and builds a content-based recommendation engine using K-Means clustering and FastText (with TF-IDF as an alternative). Outputs are presented as charts and dashboard screenshots for exploration.
 
-## Introduction
+### 🧭 Methodology (high level)
 
-Recommender systems have become crucial for navigating the vast information landscapes of today's streaming platforms. These systems learn user preferences and suggest personalized content. In this project, we focus on visualizing the content libraries of top OTT platforms like Netflix, Disney Plus, Hulu, and Amazon Prime. Our goals include:
+* Load & clean: normalize dates, fill missing values, cast types, standardize text.
 
-Unveiling fascinating correlations and patterns within the dataset.
-Constructing an interactive dashboard that aids exploration and understanding of streaming content.
-Implementing a recommendation system powered by K-Means clustering to suggest similar content based on user watch history.
+* Feature engineering: add platform column, merge datasets, preprocess descriptions for NLP.
 
-## Data Description
+* Text representation: train FastText embeddings on descriptions (alternatively TF-IDF).
 
-The project utilizes four datasets, each containing details about movies and TV shows available on their respective platforms: Netflix, Hulu, Disney Plus, and Amazon Prime. These datasets include attributes like:
+* Clustering & recommendations: apply K-Means to embeddings, assign cluster_id, and rank intra-cluster titles by similarity for top-N suggestions.
 
-Cast
-Director
-Duration
-Release Year
-Ratings
-Title
-Description
-Country
-Listed In
-Date Added
-Each dataset comprises roughly 22,000 observations. The combined dataset, obtained from Kaggle's Open-Source Dataset Library, incorporates these attributes along with a new column indicating the OTT platform.
+* Visualization: platform distributions, rating trends, country choropleth, genre analysis, word cloud, and timeline plots.
 
-## Methodology and Data Flow
+### 📈 Key Insights & Results
 
-This project follows a meticulously designed workflow:
+* Netflix and Amazon hold the largest volumes; Disney is movie-heavy.
 
-## 1. Data Cleaning and Exploration:
+* Content additions spiked post-2014 (notably Netflix).
 
-Importing datasets using libraries like pandas.
-Performing data cleaning tasks to ensure consistency and handle missing values.
-Analyzing data characteristics to identify suitable visualization strategies.
+* K-Means + FastText produces meaningful cross-platform recommendations; sample queries return coherent top-5 similar titles.
 
-## 2. Exploratory Data Analysis (EDA) and Visualization (Python):
+* Visual analyses reveal platform specializations by country, genre, and audience ratings.
 
-Employing libraries like matplotlib or Seaborn to generate visualizations.
-Analyzing relationships and dependencies between data attributes.
-Creating visualizations that effectively convey insights.
+### 🧩 Future Enhancements
 
-## 3. Interactive Dashboard Creation using Tableau:
+* Hybrid recommender combining collaborative filtering with content signals.
 
-Leveraging Tableau's functionalities to construct visually appealing and interactive dashboards.
-Facilitating easy exploration of streaming content data through interactive elements.
+* Replace FastText with transformer sentence embeddings for improved semantics.
 
-### 4. K-Means Clustering and Recommendation System:
+* Add sentiment analysis on reviews/descriptions and time-aware recommendations.
 
-Applying the K-Means clustering algorithm to group similar shows and movies.
-Assigning cluster labels to data points.
-Building a recommendation engine that:
-Accepts a movie/show title as input.
-Identifies the cluster to which it belongs.
-Recommends similar shows/movies within the same cluster using text similarity techniques.
-
-
-## Contribution
-
-This project offers valuable insights into streaming content data analysis and visualization. It demonstrates the application of K-Means clustering for building a recommendation system. Feel free to explore the code and dashboards!
+* Build an interactive web app (Streamlit / Dash / Shiny) and expose an API (ONNX / TorchScript).
 
 <img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/27dd9d50-0249-434d-82c8-1db31cf3838a" />
 <img width="1918" height="929" alt="image" src="https://github.com/user-attachments/assets/a4bc36b1-f674-4b70-a141-730c281aaef7" />
